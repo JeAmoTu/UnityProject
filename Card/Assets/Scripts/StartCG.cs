@@ -8,6 +8,7 @@ public class StartCG : MonoBehaviour {
     private bool isPlaying = true;
     private bool isShowMessage = false;
 
+    public TweenScale logoTweenScale;
     // Use this for initialization
     void Start () {
         mMovieTexture.loop = false;
@@ -41,5 +42,6 @@ public class StartCG : MonoBehaviour {
     private void StopMovie() {
         mMovieTexture.Stop();
         isPlaying = false;
+        logoTweenScale.PlayForward();
     }
 }
