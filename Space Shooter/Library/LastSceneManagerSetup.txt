@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/Main.unity
+- path: C:/Users/wangxin/Desktop/Space Shooter/Space Shooter/Assets/Space Shooter.unity
   isLoaded: 1
   isActive: 1
