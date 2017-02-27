@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeroSelect : MonoBehaviour {
+public class HeroSelect : MonoBehaviour
+{
     private UISprite mSelectHeroImage;
     private UILabel mSelectHeroName;
 
@@ -18,15 +19,17 @@ public class HeroSelect : MonoBehaviour {
         "潜行者：瓦莉拉"
     };
 
-    private void Awake() {
+    private void Awake()
+    {
         mSelectHeroImage = this.transform.parent.Find("Hero0").GetComponent<UISprite>();
         mSelectHeroName = this.transform.parent.Find("HeroName").GetComponent<UILabel>();
     }
 
-    void OnClick() {
+    void OnClick()
+    {
         string mHeroName = this.gameObject.name;
         mSelectHeroImage.spriteName = mHeroName;
-        char mHeroNameIndexChar = mHeroName[mHeroName.Length  - 1];
+        char mHeroNameIndexChar = mHeroName[mHeroName.Length - 1];
         int mHeroNameIndex = mHeroNameIndexChar - '0';
         mSelectHeroName.text = HeroNames[mHeroNameIndex - 1];
     }
